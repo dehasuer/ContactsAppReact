@@ -33,7 +33,7 @@ export function Form({addContact , contacts}) {
             <div>
                 <input name="phone_number" placeholder="phone number" onChange={onChangeInput} value={form.phone_number}/>
             </div>
-            <div>
+            <div className="btn">
                 <button>Add</button>
             </div>
         </form>
