@@ -10,16 +10,16 @@ export function Form({addContact , contacts}) {
 
 
     const onChangeInput = (e) => {
-        setForm({...form , [e.target.name] : e.target.value});
+        setForm({...form , [e.target.name] : e.target.value}); //Enable editing the form.
     }
 
     const onSubmit = (e) => {
         e.preventDefault() //To avoid refreshing page when form submitted
 
-        if (form.fullname === "" || form.phone_number === "") { //When form inputs are empty dont submit it
+        if (form.fullname === "" || form.phone_number === "") { //When form inputs are empty disable the submit function.
             return false
         }
-        addContact([...contacts,form])
+        addContact([...contacts,form]) //Add contact to the list with keeping the old ones.
 
 
 
